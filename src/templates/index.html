@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Network Monitor</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+
+    <h2>Network Monitor for UMKA (<span id="count">0</span>) <span style="font-size: 14px; color: #888; font-weight: normal; margin-left: 10px;">v{{ software_version }}</span></h2>
+
+    <div id="config" data-interval="{{ ajax_interval }}"></div>
+
+    <div class="grid" id="stats-grid">
+    </div>
+
+    <div class="range-buttons">
+        <button class="range-btn active" data-hours="1">1 час</button>
+        <button class="range-btn" data-hours="8">8 часов</button>
+        <button class="range-btn" data-hours="24">1 день</button>
+        <button class="range-btn" data-hours="168">1 неделя</button>
+        
+        <button class="reset-btn" id="reset-data-btn" style="margin-left: 20px; background-color: #dc3545; color: white; border: none; padding: 6px 12px; cursor: pointer; border-radius: 4px; font-weight: bold;">Сброс</button>
+    </div>
+
+    <div class="graph-container">
+        <img id="plot" src="" class="main-plot">
+    </div>
+
+    <div class="footer" style="margin-top: 40px; padding: 15px 0; border-top: 1px solid rgba(255,255,255,0.1); text-align: center; color: #777; font-size: 13px;">
+        Разработка: <a href="https://panamarchuk.pl" target="_blank" style="color: orange; text-decoration: none; font-weight: bold;">www.panamarchuk.pl</a>
+    </div>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+
+</body>
+</html>
