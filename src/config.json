@@ -1,0 +1,13 @@
+{
+    "server_location": "Triol-BOX",
+    "software_version": "1.1.0",
+    "retention_hours": 72,
+    "ssh_interval": 5,
+    "ajax_interval": 30,
+    "targets": [
+        {"name": "UMKA-1", "host": "192.168.8.3", "port": 22, "user": "root", "password": ""},
+        {"name": "UMKA-2", "host": "192.168.7.12", "port": 23, "user": "root", "password": ""},
+        {"name": "UMKA-3", "host": "192.168.7.13", "port": 23, "user": "root", "password": ""},
+        {"name": "UMKA-4", "host": "192.168.7.14", "port": 23, "user": "root", "password": ""}
+    ]
+}
