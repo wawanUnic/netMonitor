@@ -1,0 +1,103 @@
+:root {
+    --bg-color: #0f111a;
+    --card-bg: #1a1d2b;
+    --accent-color: orange;
+    --text-color: #e1e1e1;
+
+    --btn-bg: #2a2f45;
+    --btn-bg-hover: #3a4060;
+    --btn-active: #ff9800;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    margin: 20px;
+}
+
+h2 {
+    text-align: center;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.node-card {
+    background: var(--card-bg);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.status-indicator {
+    height: 4px;
+    width: 100%;
+    margin-bottom: 10px;
+    border-radius: 2px;
+}
+
+.stats-line {
+    font-size: 0.9em;
+    color: #888;
+}
+
+.stats-line b {
+    color: #fff;
+}
+
+.graph-container {
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.main-plot {
+    width: 100%;
+    height: auto;
+}
+
+/* ----------------------------- */
+/*      КРАСИВЫЕ БОЛЬШИЕ КНОПКИ  */
+/* ----------------------------- */
+
+.range-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 25px 0;
+}
+
+.range-btn {
+    padding: 14px 26px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 10px;
+    border: 2px solid var(--btn-bg);
+    cursor: pointer;
+    background: var(--btn-bg);
+    color: var(--text-color);
+    transition: 0.25s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.range-btn:hover {
+    background: var(--btn-bg-hover);
+    transform: translateY(-2px);
+}
+
+.range-btn.active {
+    background: var(--btn-active);
+    border-color: var(--btn-active);
+    color: #000;
+    box-shadow: 0 6px 16px rgba(255,152,0,0.4);
+}
